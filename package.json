@@ -1,4 +1,10 @@
 {
+  "author": "Dr Nic Williams drnic@starkandwayne.com",
+  "license" : "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "node built/server.js"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "pug": "^2.0.3"
