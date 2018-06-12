@@ -49,6 +49,7 @@ node built/server.js
 First, convert TypeScript `src/**/*.ts` files into JavaScript `built/**/*.js` files:
 
 ```plain
+yarn
 npm run-script build
 ```
 
