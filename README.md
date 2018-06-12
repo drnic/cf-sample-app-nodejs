@@ -4,7 +4,7 @@
 
 This branch is approximately the same JavaScript/Node application from [samples `master` branch](https://github.com/cloudfoundry-samples/cf-sample-app-nodejs, rewritten in TypeScript.
 
-During the rewrite, the deprecated/renamed `jade` library was upgraded to `pug`. The new application uses Yarn for package management of npm/`node_modules`.
+During the rewrite, the deprecated/renamed `jade` library was upgraded to `pug`. The new application uses Yarn for package management of npm/`node_modules`. The `.js` and `app/*.js` source files can been moved into `src` and converted into `.ts` TypeScript.
 
 ## Dependencies
 
