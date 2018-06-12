@@ -1,13 +1,14 @@
-var express = require( 'express')
+import * as express from 'express';
+import * as cf_app from './app/vcap_application';
+import * as cf_svc from './app/vcap_services';
+
 var app = express()
-var cf_app = require( './app/vcap_application')
-var cf_svc = require( './app/vcap_services')
 
-app.set( 'views', __dirname + '/views')
-app.set( 'view engine', 'jade')
-app.use( express.static( __dirname + '/public'))
+app.set('views', __dirname + '/../views')
+app.set('view engine', 'pug')
+app.use(express.static( __dirname + '/../public'))
 
-app.get( '/', function ( req, res) {
+app.get( '/', function (_, res) {
   res.render( 'pages/index', {
     app_environment:    app.settings.env,
     application_name:   cf_app.get_app_name(),
@@ -22,4 +23,4 @@ app.get( '/', function ( req, res) {
   })
 })
 
-app.listen( process.env.PORT || 4000)
+app.listen(process.env.PORT || 4000)
